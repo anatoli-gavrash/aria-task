@@ -1,0 +1,5 @@
+@import './variables.scss';
+
+@mixin bgGradient($prop, $angle) {
+  #{$prop}: linear-gradient($angle+deg, $color-purple 0, $color-green 49%, $color-aquamarine 100%);
+}

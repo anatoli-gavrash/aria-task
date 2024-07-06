@@ -1,0 +1,49 @@
+@import '../../../styles/variables.scss';
+
+.shops_item {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  min-width: 132px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: $color-dark-gray;
+  backdrop-filter: blur(14px);
+
+  @media (max-width: 576px) {
+    min-width: 100px;
+    padding: 4px 8px;
+  }
+
+  &__icon {
+    @media (max-width: 576px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__wrapper {
+    color: $color-white40;
+    
+    &_text {
+      font-size: 12px;
+      line-height: 12px;
+
+      @media (max-width: 576px) {
+        font-size: 10px;
+        line-height: 10px;
+      }
+    }
+
+    &_name {
+      margin-top: 2px;
+      font-size: 20px;
+      line-height: 24px;
+
+      @media (max-width: 576px) {
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
+}

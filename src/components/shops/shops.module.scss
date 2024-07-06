@@ -1,0 +1,8 @@
+.shops {
+  display: flex;
+  column-gap: 20px;
+
+  @media (max-width: 576px) {
+    column-gap: 16px;
+  }
+}
