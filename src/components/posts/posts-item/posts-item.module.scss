@@ -1,0 +1,82 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.posts_item {
+  position: relative;
+  width: 100%;
+  max-width: 290px;
+  min-height: 140px;
+  padding: 16px 20px;
+  border-radius: 20px;
+  color: $color-white;
+  background-color: $color-dark-gray;
+  backdrop-filter: blur(15px);
+
+  &:before {
+    content: "";
+    position: absolute;
+    padding: 1px;
+    border-radius: 20px;
+    @include bgGradient(background-image, 94);
+    mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+    mask-composite: exclude;
+    inset: 0;
+    opacity: 0.2;
+  }
+
+  &:nth-child(odd) {
+    align-self: flex-end;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    column-gap: 19px;
+
+    &_avatar {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        padding: 1px;
+        border-radius: 50%;
+        @include bgGradient(background-image, 91);
+        mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+        mask-composite: exclude;
+        inset: 0;
+        opacity: 0.4;
+      }
+
+      &_img {
+        box-sizing: content-box;
+        border: 1px solid transparent;
+        vertical-align: middle;
+      }
+    }
+
+    &_data {      
+      &_name {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        text-transform: uppercase;
+      }
+
+      &_nickname {
+        margin-top: 3px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: $color-white40;
+      }
+    }
+  }
+
+  &__message {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 115%;
+  }
+}

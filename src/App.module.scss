@@ -1,1 +1,5 @@
-.app {}
+@import './styles/variables.scss';
+
+.app {
+  background-color: $color-black;
+}
