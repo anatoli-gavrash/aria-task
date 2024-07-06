@@ -1,0 +1,15 @@
+.posts {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+  width: 100%;
+  max-width: 402px;
+  top: 171px;
+  right: 81px;
+  list-style: none;
+
+  @media (max-width: 1220px) {
+    display: none;
+  }
+}
